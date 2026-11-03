@@ -29,7 +29,17 @@
       --White: #FFFFFF;
 
       /* ### breakpoints ### */
-      --mx-h: 40rem;
+      --mx-h: 50rem;
+      /* sm */
+      --s-t: -80%;
+      --s-r: -70%;
+      --s-b: -40%;
+      --s-l: -70%;
+      /* md > lg */
+      --md-t: -75%;
+      --md-r: -15%;
+      --md-b: -45%;
+      --md-l: -15%;
     }
 
     img{
@@ -50,19 +60,31 @@
       position: absolute;
       opacity: 0.5;
       z-index: 0;
+      rotate: 45deg;
     }
 
     body::before{
       content: url(images/bg-pattern-top.svg);
-      top: -65%;
-      left: -30%;
-      rotate: 90deg;
+      top: var(--s-t);
+      left: var(--s-l);
     }
 
     body:after{
       content: url(images/bg-pattern-bottom.svg);
-      bottom: -30%;
-      right: -30%;
+      bottom: var(--s-b);
+      right: var(--s-r);
+    }
+
+    @media (min-width: 48rem) {
+      body::before{
+      top: var(--md-t);
+      left: var(--md-l);
+    }
+
+    body:after{
+      bottom: var(--md-b);
+      right: var(--md-r);
+    }
     }
 
 

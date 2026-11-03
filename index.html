@@ -29,7 +29,7 @@
       --White: #FFFFFF;
 
       /* ### breakpoints ### */
-      --mx-h: 43,75rem;
+      --mx-h: 40rem;
     }
 
     img{
@@ -44,8 +44,6 @@
 
     body::before,
     body::after{
-      width: fit-content;
-      height: fit-content;
       max-height: var(--mx-h);
       max-width: var(--mx-h);
       border-radius: 50%;
@@ -56,15 +54,15 @@
 
     body::before{
       content: url(images/bg-pattern-top.svg);
-      top: -55%;
-      left: -15%;
+      top: -65%;
+      left: -30%;
       rotate: 90deg;
     }
 
     body:after{
       content: url(images/bg-pattern-bottom.svg);
       bottom: -30%;
-      right: -15%;
+      right: -30%;
     }
 
 

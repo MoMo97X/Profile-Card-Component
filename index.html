@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+  <!-- google font Kumbh-sans-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+  <!-- tailwind css CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <style>
+
+    :root{
+      /* ### Primary ### */
+        --Blue600: hsl(185, 75%, 39%);
+        --Navy950: hsl(229, 23%, 23%);
+        --Gray500: hsl(227, 10%, 46%);
+
+      /* ### Neutral ### */
+      --Gray100: hsl(225, 10%, 92%);
+      --White: #FFFFFF;
+
+      /* ### breakpoints ### */
+      --mobile: 375px;
+      --large: 990px;
+    }
+
+    img{
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    html{
+      overflow: hidden;
+    }
+
+    body::before,
+    body::after{
+      width: fit-content;
+      height: fit-content;
+      max-height: 700px;
+      max-width: 700px;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    body::before{
+      content: url(images/bg-pattern-top.svg);
+      top: -55%;
+      left: -15%;
+      rotate: 90deg;
+    }
+
+    body:after{
+      content: url(images/bg-pattern-bottom.svg);
+      bottom: -30%;
+      right: -15%;
+    }
+
+
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body class="h-screen px-6 flex justify-center items-center flex-col bg-[var(--Blue600)] overflow-hidden">
+
+  <!-- main content -->
+  <div class="card w-full max-w-[350px] flex flex-col border rounded-xl overflow-hidden relative z-1">
+    <div class="card-header p-16 bg-[url('images/bg-pattern-card.svg')] relative">
+      <img class="w-28 h-28 rounded-full border-6 border-[var(--White)] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y[-50%]" src="images/image-victor.jpg" alt="Victor Crest">
+    </div>
+    <div class="card-body bg-[#fff]">
+      <h1 class="text-2xl mt-16 text-center font-bold">Victor Crest <span class="ml-2 font-[400] text-[var(--Gray500)]">26</span></h1>
+      <p class="text-center mb-6 mt-[10px] text-xl tracking-[1.5px] text-[var(--Gray500)] ">London</p>
+      <hr class="text-[var(--Gray100)]">
+      <div class="card-body-info text-center px-6 py-5 flex justify-around items-center">
+        <span>
+          <h2 class="text-2xl font-bold mb-1">80K</h2>
+          <p class="text-sm font-thin text-[var(--Gray500)] tracking-wide ">Followers</p>
+        </span>
+        <span>
+          <h2 class="text-2xl font-bold mb-1">803K</h2>
+          <p class="text-sm font-thin text-[var(--Gray-500)] tracking-wide ">Likes</p>
+        </span>
+        <span>
+          <h2 class="text-2xl font-bold mb-1">1.4K</h2>
+          <p class="text-sm font-thin text-[var(--Gray-500)] tracking-wide ">Photos</p>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="attribution hidden">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
